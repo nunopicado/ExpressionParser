@@ -55,3 +55,17 @@ __history/
 
 # Castalia statistics file
 *.stat
+
+*.dproj
+
+*.o
+
+*.bak
+
+*.out
+
+*.err
+
+*.dir
+
+*.res
