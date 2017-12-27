@@ -62,59 +62,60 @@ implementation
 function Help(Level: Integer): String;
 begin
   Result := ' E X P R E S S I O N   P A R S E R' + BR +
-            '-----------------------------------' + BR + BR;
+            '-----------------------------------' + BR +
+            BR;
 
   if Level in [0, 1]
-    then Result := Result + 'A J U D A (' + IntToStr(Level) + '): Parse' + BR
-                          + 'Devolve em formato numérico (Real) o valor da expressão passada por parâmetro!'
-                          + BR + 'Uso: <real> := Parse(Expressão: ShortString);        Exemplo: r := Parse(''1+2+3'');'
-                          + BR + BR;
+    then Result := Result + 'A J U D A (' + IntToStr(Level) + '): Parse' + BR +
+                            'Devolve em formato numérico (Real) o valor da expressão passada por parâmetro!' + BR +
+                            'Uso: <real> := Parse(Expressão: ShortString);        Exemplo: r := Parse(''1+2+3'');' + BR +
+                            BR;
 
   if Level in [0, 2]
     then Result := Result + 'A J U D A (' + IntToStr(Level) + '): ParseF' + BR +
-                            'Devolve em formato alfanumérico (ShortString) o valor da expressão passada por parâmetro!'
-                          + BR + 'Uso: <string> := Parse(Expressão: ShortString; Precisão, Decimais: Integer);        Exemplo: s := ParseF(''1+2+3'',3,2);'
-                          + BR + 'Precisão: Número mínimo de algarismos reservados para o resultado'
-                          + BR + 'Decimais: Número máximo de casas decimais para o resultado'
-                          + BR + BR;
+                            'Devolve em formato alfanumérico (ShortString) o valor da expressão passada por parâmetro!' + BR +
+                            'Uso: <string> := Parse(Expressão: ShortString; Precisão, Decimais: Integer);        Exemplo: s := ParseF(''1+2+3'',3,2);' + BR +
+                            'Precisão: Número mínimo de algarismos reservados para o resultado' + BR +
+                            'Decimais: Número máximo de casas decimais para o resultado' + BR +
+                            BR;
 
   if Level in [0, 3]
     then Result := Result + 'A J U D A (' + IntToStr(Level) + '): History' + BR +
                             'Grupo de funções para gerir o histórico de operações efectuadas:' + BR +
                             '- Inicializar o Histórico: Uso: HistoryClear;' + BR +
                             '- Gerar o Histórico (String): Uso: s:=HistoryShow;' + BR +
-                            '- Terminar o Histórico: Uso: HistoryClose; (Nota: É importante terminar o historico no fim do programa se este tiver sido inicializado!)'
-                            + BR + BR;
+                            '- Terminar o Histórico: Uso: HistoryClose; (Nota: É importante terminar o historico no fim do programa se este tiver sido inicializado!)' + BR +
+                            BR;
 
   if Level in [0, 4]
     then Result := Result + 'A J U D A (' + IntToStr(Level) + '): Parêntesis' + BR +
-                            'É suportado o uso de parêntesis curvos, simples () ou encadeados (())' +
-                            BR + 'Prioridades: São sempre prioritárias as operações contidas pelo grupo de parêntesis mais interno, até às operações fora de parêntesis.'
-                            + BR + BR;
+                            'É suportado o uso de parêntesis curvos, simples () ou encadeados (())' + BR +
+                            'Prioridades: São sempre prioritárias as operações contidas pelo grupo de parêntesis mais interno, até às operações fora de parêntesis.' + BR +
+                            BR;
 
   if Level in [0, 5]
     then Result := Result + 'A J U D A (' + IntToStr(Level) + '): Constantes' + BR +
-                            'As constantes são representações alfabéticas de um valor numérico fixo. Podem ser inseridas normalmente nas expressões.'
-                            + BR + 'Uso: CONSTANTE   ***   Coloca-se o nome da constante em qualquer lugar da expressão'
-                            + BR + '- PI: 3.14159265' + BR + '- E: 2.71828182' + BR + BR;
+                            'As constantes são representações alfabéticas de um valor numérico fixo. Podem ser inseridas normalmente nas expressões.' + BR +
+                            'Uso: CONSTANTE   ***   Coloca-se o nome da constante em qualquer lugar da expressão' + BR +
+                            '- PI: 3.14159265' + BR +
+                            '- E: 2.71828182' + BR +
+                            BR;
 
   if Level in [0, 6]
-    then Result := Result + 'A J U D A (' + IntToStr(Level) +
-                            '): Funções Especiais (múltiplos argumentos)' + BR +
-                            'As funções especiais recebem múltiplos argumentos. Podem ser inseridas normalmente nas expressões, mas não é possível encadear funções especiais, embora possam ser usadas funções normais dentro das especiais.'
-                            + BR + 'Uso: FUNÇÃO [arg1 arg2 arg3 ... arg_n]   ***   Coloca-se o nome da função, seguido dos argumentos, separados por espaços e contidos entre parêntesis rectos [].'
-                            + BR + '- MEDIA: Calcula a média de todos os argumentos fornecidos.' + BR
-                            + '- HIPOTENUSA: Calcula a hipotenusa de um triângulo rectângulo, cujos catetos são os argumentos 1 e 2.'
-                            + BR + '- DIV: Calcula a divisão inteira dos dois primeiros argumentos.' +
-                            BR + '- MOD: Calcula o resto da divisão inteira dos dois primeiros argumentos.'
-                            + BR + BR;
+    then Result := Result + 'A J U D A (' + IntToStr(Level) + '): Funções Especiais (múltiplos argumentos)' + BR +
+                            'As funções especiais recebem múltiplos argumentos. Podem ser inseridas normalmente nas expressões, mas não é possível encadear funções especiais, embora possam ser usadas funções normais dentro das especiais.' + BR +
+                            'Uso: FUNÇÃO [arg1 arg2 arg3 ... arg_n]   ***   Coloca-se o nome da função, seguido dos argumentos, separados por espaços e contidos entre parêntesis rectos [].' + BR +
+                            '- MEDIA: Calcula a média de todos os argumentos fornecidos.' + BR +
+                            '- HIPOTENUSA: Calcula a hipotenusa de um triângulo rectângulo, cujos catetos são os argumentos 1 e 2.' + BR +
+                            '- DIV: Calcula a divisão inteira dos dois primeiros argumentos.' + BR +
+                            '- MOD: Calcula o resto da divisão inteira dos dois primeiros argumentos.' + BR +
+                            BR;
 
   if Level in [0, 7]
-    then Result := Result + 'A J U D A (' + IntToStr(Level) +
-                            '): Funções (argumento único)' + BR +
-                            'As funções recebem um único argumento. Podem ser inseridas normalmente nas expressões, e podem ser encadeadas desde que usem parêntesis em redor das expressões internas Ex.: ABS (SEN 5) .'
-                            + BR + 'Uso: FUNÇÃO Arg  ou  FUNÇÃO (Expressão)   ***   Coloca-se o nome da função, seguido do argumento. O Argumento pode ser uma expressão também, se contido entre parêntesis curvos.'
-                            + BR + '- SEN: Calcula o seno de um ângulo (em radianos).' + BR +
+    then Result := Result + 'A J U D A (' + IntToStr(Level) + '): Funções (argumento único)' + BR +
+                            'As funções recebem um único argumento. Podem ser inseridas normalmente nas expressões, e podem ser encadeadas desde que usem parêntesis em redor das expressões internas Ex.: ABS (SEN 5) .' + BR +
+                            'Uso: FUNÇÃO Arg  ou  FUNÇÃO (Expressão)   ***   Coloca-se o nome da função, seguido do argumento. O Argumento pode ser uma expressão também, se contido entre parêntesis curvos.' + BR +
+                            '- SEN: Calcula o seno de um ângulo (em radianos).' + BR +
                             '- COS: Calcula o coseno de um ângulo (em radianos).' + BR +
                             '- TAN: Calcula a tangente de um ângulo (em radianos).' + BR +
                             '- ARCSEN: Calcula o arcoseno de um ângulo (em radianos).' + BR +
@@ -127,38 +128,43 @@ begin
                             '- QUADRADO: Calcula o quadrado de um valor.' + BR +
                             '- CUBO: Calcula o cubo de um valor.' + BR +
                             '- ROUND: Arredonda um valor ao seu inteiro mais próximo.' + BR +
-                            '- TRUNC: Trunca um valor ao número inteiro imediatamente inferior.' + BR
-                            + '- ABS: Devolve a parte absoluta de um valor (sem sinal negativo ou positivo).'
-                            + BR + '- FRAC: Devolve a parte fraccional de um valor.' + BR +
+                            '- TRUNC: Trunca um valor ao número inteiro imediatamente inferior.' + BR +
+                            '- ABS: Devolve a parte absoluta de um valor (sem sinal negativo ou positivo).' + BR +
+                            '- FRAC: Devolve a parte fraccional de um valor.' + BR +
                             '- PAR: Devolve 1 se um valor for par, ou 0 se o valor for impar.' + BR +
                             '- LN: Calcula o logaritmo natural de um valor.' + BR +
                             '- LOG2: Calcula o logaritmo de base 2 de um valor.' + BR +
-                            '- LOG10: Calcula o logaritmo de base 10 de um valor.' + BR + BR;
+                            '- LOG10: Calcula o logaritmo de base 10 de um valor.' + BR +
+                            BR;
 
   if Level in [0, 8]
-    then Result := Result + 'A J U D A (' + IntToStr(Level) + '): Operadores Lógicos'
-                          + BR + 'Os operadores lógicos devolvem 1 ou 0 caso a operação retorne True ou False. .'
-                          + BR + 'Uso: arg1 OPERADOR arg2   ***   Coloca-se o operador entre dois argumentos.'
-                          + BR + 'Prioridade ente operadores: Máxima' + BR +
-                          '- =: True se os argumentos tiverem o mesmo valor.' + BR +
-                          '- !: True se os argumentos tiverem valor diferente.' + BR +
-                          '- <: True se o primeiro argumento for menor que o segundo.' + BR +
-                          '- >: True se o primeiro argumento for maior que o segundo.' + BR + BR;
+    then Result := Result + 'A J U D A (' + IntToStr(Level) + '): Operadores Lógicos' + BR +
+                            'Os operadores lógicos devolvem 1 ou 0 caso a operação retorne True ou False. .' + BR +
+                            'Uso: arg1 OPERADOR arg2   ***   Coloca-se o operador entre dois argumentos.' + BR +
+                            'Prioridade ente operadores: Máxima' + BR +
+                            '- =: True se os argumentos tiverem o mesmo valor.' + BR +
+                            '- !: True se os argumentos tiverem valor diferente.' + BR +
+                            '- <: True se o primeiro argumento for menor que o segundo.' + BR +
+                            '- >: True se o primeiro argumento for maior que o segundo.' + BR +
+                            BR;
 
   if Level in [0, 9]
-    then Result := Result + 'A J U D A (' + IntToStr(Level) +
-                            '): Operadores Aritméticos' + BR +
-                            'Os operadores aritméticos devolvem o resultado da operação que representam'
-                            + BR + 'Uso: arg1 OPERADOR arg2   ***   Coloca-se o operador entre dois argumentos.'
-                            + BR + '- ^: Exponenciação (arg1 elevado a arg2).' + BR +
+    then Result := Result + 'A J U D A (' + IntToStr(Level) + '): Operadores Aritméticos' + BR +
+                            'Os operadores aritméticos devolvem o resultado da operação que representam' + BR +
+                            'Uso: arg1 OPERADOR arg2   ***   Coloca-se o operador entre dois argumentos.' + BR +
+                            '- ^: Exponenciação (arg1 elevado a arg2).' + BR +
                             '- / (ou : Divisão.' + BR + '- * (ou x ou X): Multiplicação.' + BR +
-                            '- +: Soma.' + BR + '- -: Subtração.' + BR + BR;
+                            '- +: Soma.' + BR + '- -: Subtração.' + BR +
+                            BR;
 
   if Level in [0, 10]
-    then Result := Result + 'A J U D A (' + IntToStr(Level) + '): Cálculos de Sinais'
-                          + BR + 'Os sinais duplos são calculados de acordo com as leis matemáticas:'
-                          + BR + '- ++ = +' + BR + '- +- = -' + BR + '- -+ = -' + BR +
-                          '- -- = +' + BR + BR;
+    then Result := Result + 'A J U D A (' + IntToStr(Level) + '): Cálculos de Sinais' + BR +
+                            'Os sinais duplos são calculados de acordo com as leis matemáticas:' + BR +
+                            '- ++ = +' + BR +
+                            '- +- = -' + BR +
+                            '- -+ = -' + BR +
+                            '- -- = +' + BR +
+                            BR;
 end;
 
 procedure HistoryClear;
